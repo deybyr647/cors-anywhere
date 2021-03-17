@@ -11,8 +11,8 @@ var port = process.env.PORT || 8080;
 let whiteList = "http://localhost,https://localhost,https://recycleit.vercel.app,https://recycleit-deybyr647.vercel.app";
 
 var originBlacklist = parseEnvList(process.env.CORSANYWHERE_BLACKLIST);
-//var originWhitelist = parseEnvList(process.env.CORSANYWHERE_WHITELIST);
-var originWhitelist = parseEnvList(whiteList);
+var originWhitelist = parseEnvList(process.env.CORSANYWHERE_WHITELIST);
+//var originWhitelist = parseEnvList(whiteList);
 function parseEnvList(env) {
   if (!env) {
     return [];
